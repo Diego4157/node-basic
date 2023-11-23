@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/lista.css">
+    <title>Lista de Elementos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Elementos</h1>
+    </header>
+    <main>
+        <nav>
+            <label for="filterProperty">Filtrar por:</label>
+            <input type="checkbox" id="filtroCiudad" onchange="applyFilters('ciudad')">
+            <label for="filtroCiudad">Ciudad</label>
+            <input type="text" id="ciudad">
+            <input type="checkbox" id="filtroDistancia" onchange="applyFilters('distancia')">
+            <label for="filtroDistancia">Distancia</label>
+            <input type="text" id="distancia">
+            <div class="botones">
+                <button onclick="applyFilters()">Filtrar</button>
+                <button onclick="clearFilters()">Limpiar</button>
+            </div>
+            <button onclick="volverInicio()">Volver al login</button>
+        </nav>
+
+        <div class="main-container">
+            <table id="elementTable">
+                <thead>
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>lugar</th>
+                        <th>distancia</th>
+                        <th>plan smart</th>
+                        <th>plan black</th>
+                        <th>plan black sin permanencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()" id="prevPageBtn" disabled>Página Anterior</button>
+                <span id="currentPage">1</span>
+                <button onclick="nextPage()" id="nextPageBtn">Página Siguiente</button>
+            </div>
+            </section>
+        </div>
+    </main>
+    <script src="lista.js"></script>
+</body>
+
+</html>

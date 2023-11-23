@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <header><h1>Gim Tauros</h1></header>
+    <main>
+        <form class="login-form">
+            <h2>Login</h2>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div></div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+
+            <div class="form-group button-group">
+                <button type="button" onclick="login()">Ingresar</button>
+                <button type="button" onclick="resetForm()">Limpiar Campos</button>
+            </div>
+
+            <div class="error-message"></div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
